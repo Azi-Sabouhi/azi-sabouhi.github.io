@@ -28,10 +28,15 @@ body {
     width: 100%;
     height: 12vh;
     box-shadow: inset 0 0 30px white;
-    background-image: linear-gradient(60deg, rgba(255, 192, 203, 0.539) 30%, rgba(0, 153, 255, 0.519), rgba(255, 192, 203, 0.539)70%);
+    background-image: linear-gradient(60deg, rgba(255, 192, 203, 0.662) 30%, rgba(0, 153, 255, 0.659), rgba(255, 192, 203, 0.662)70%);
     position: fixed;
     z-index: 5;
     top: 0;
+}
+
+.local:hover p {
+    font-weight: 500;
+    text-shadow: 0 0 10px blueviolet;
 }
 
 .local button {
@@ -41,19 +46,56 @@ body {
     width: 20vw;
     background-color: #808080;
     color: white;
+    transition: all 300ms ease 0s;
+
 }
 
+.local button a {
+    text-decoration: none;
+    color: white;
+    /* background-color: rgba(0, 255, 255, 0.52); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.local button a p {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: px;
+}
+
+/* 
+.local button a:hover {
+    color: gray;
+} */
+
 .local button:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.715);
     box-shadow: inset 0 0 10px rgb(247, 0, 255);
     color: gray;
     text-shadow: 0 0 5px rgb(0, 115, 128);
 }
 
+.local button:hover>a {
+    color: gray;
+}
+
 .closeB {
     position: absolute;
-    right: 1vw;
-    top: 1vh;
+    right: 5vw;
+    top: 4.5vh;
+    transition: all 200ms ease 0s;
+}
+
+.closeB:hover {
+    color: rgb(242, 0, 255);
+    text-shadow: 0 0 4px rgb(140, 253, 195);
 }
 
 .local p {
@@ -62,7 +104,9 @@ body {
     line-height: 5vh;
     padding-left: 5vw;
     color: #ffffff;
-    text-shadow: 0 0 1px blue;
+    text-shadow: 0 0 1px solid blue;
+    /* position: absolute; */
+    transition: all 200ms ease 0s;
 }
 
 /* -------------------------------------------------- */
@@ -193,7 +237,7 @@ li {
 .setting {
     width: 80px;
     height: 80px;
-    /* border: 1px solid gray; */
+    /* border: 1px solid solid gray; */
     background-image: linear-gradient(45deg, #555555 0 50%, rgba(255, 255, 255, 0)50% 100%);
     position: fixed;
     left: 0;
@@ -224,7 +268,7 @@ li {
     justify-content: center;
     align-items: center;
     background-color: #ececec;
-    border: 1px solid red;
+    border: 1px solid solid red;
     border-collapse: collapse;
     height: 81px;
     font-family: sans-serif;
@@ -275,11 +319,14 @@ li {
 .h2w {
     width: 100%;
     text-align: center;
-    height: 15vh;
+    height: 20vh;
     line-height: 15vh;
     font-family: sans-serif;
     border-radius: 5px;
     box-shadow: inset 0 0 10px white;
+    font-weight: 600;
+    font-size: 36px;
+
 }
 
 /* .adj3 {
@@ -289,21 +336,250 @@ li {
 
 /* imgBoxes----------------------------------------- */
 .mBox {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
+    justify-content: space-around;
+    /* flex-direction: row; */
 }
 
 .mBoxc1 {
-    width: 30%;
+    width: 444px;
+    height: 310px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.mBox img {
+.mBoxc1 img {
+    transform: scale(1.05);
     width: 100%;
-    margin-left: -8px;
+    transition: all 300ms ease 0s;
+
+}
+
+.imgH {
+    height: 210px;
+    transition: all 300ms ease 0s;
+}
+
+/* .mBoxc1 img:hover {
+    transform: scale(1.1);
+} */
+
+.imgP {
+    width: 100%;
+    height: 92px;
+    color: white;
+    text-align: center;
+    line-height: 10px;
+    background-color: rgb(163, 163, 163);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 3px white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 300ms ease 0s;
+
+}
+
+.mBoxc1:hover {
+    box-shadow: 0 0 10px white;
+}
+
+.mBoxc1:hover>.imgH {
+    transform: scale(1.1);
+}
+
+.mBoxc1:hover>.imgP {
+    background-color: gray;
+    box-shadow: 0 0 10px rgb(77, 216, 251);
+}
+
+/* purpleimg-------------------------------------- */
+.purpleimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.purpleimg img {
+    width: 100%;
+    /* border: 5px groove gray; */
+    border-top: 10px;
+    border-bottom: 10px;
+    border-color: #555555;
+    border-style: inset;
+    box-shadow: 0 0 30px #ececec;
+}
+
+/* picBox2------------------------------------------ */
+.mainBox {
+    display: flex;
+    flex-direction: row;
+    height: 612px;
+    border: 1px solid solid red;
+
+}
+
+.childBox {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid solid blue;
+    overflow: hidden;
+}
+
+.child1 {
+    width: 100%;
+    height: 532px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.child1 img {
+    transform: scale(1.05);
+    width: 100%;
+    transition: all 300ms ease 0s;
+
+}
+
+.imgH1 {
+    height: 210px;
+    transition: all 300ms ease 0s;
+}
+
+.imgP1 {
+    width: 100%;
+    height: 80px;
+    color: white;
+    text-align: center;
+    line-height: 10px;
+    background-color: rgb(163, 163, 163);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 3px white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 300ms ease 0s;
+
+}
+
+.child1:hover {
+    box-shadow: 0 0 10px white;
+}
+
+.child1:hover>.imgH {
+    transform: scale(1.1);
+}
+
+.child1:hover>.imgP {
+    background-color: gray;
+    box-shadow: 0 0 10px rgb(77, 216, 251);
+}
+
+/* ------------------------------------------- */
+.border0 {
+    border: 0;
+}
+
+.box1 {
+    width: 100%;
+    height: 612px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.box2 {
+    width: 25%;
+    height: 100%;
+    border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+}
+
+.box2 a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    /* color: black; */
+    position: relative;
+    overflow: hidden;
+    color: #3d3d3d;
+}
+
+.box2 a:hover>.b2img {
+    transform: scale(1.1);
+}
+
+.b2img {
+    width: 100%;
+    height: 532px;
+    /* background-color: rgba(255, 0, 0, 0.416); */
+    overflow: hidden;
+    transition: all 300ms ease 0s;
+}
+
+.b2img img {
+    width: 100%;
+    transform: scale(1.05);
+}
+
+.b2p {
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(180deg, gray 10%, white, gray 90%);
+    z-index: 1;
+    line-height: 8px;
+    font-size: 14;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.b2p h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.box3 {
+    width: 75%;
+    height: 50%;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+.box4,
+.box5,
+.box6 {
+    width: 32%;
+    height: 98%;
+    border: 1px solid green;
 }
