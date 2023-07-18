@@ -19,12 +19,14 @@
 
 <body>
     <!-- local website---------------------------------------------- -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="bee">
         <div class="row">
-            <div class="col-12 roomyBox"></div>
+            <div class="col-12">
+                <div class="roomyBox toZiro" id="DB"></div>
+            </div>
         </div>
     </div>
-    <div class="container-fluid reset">
+    <div class="container-fluid reset toZiro" id="LocalWebsite">
         <div class="row">
             <div class="col-12 resetLocal">
                 <div class="local">
@@ -32,7 +34,7 @@
                     <p>Please switch to your local website for related news and events</p>
 
                     <button><a href="https://farsi.msi.com/">Change to local website</a></button>
-                    <div class="closeB"><span class="material-symbols-outlined">
+                    <div class="closeB" id="closeLocal"><span class="material-symbols-outlined">
                             close
                         </span></div>
                 </div>
@@ -42,7 +44,7 @@
     <!-- navigation -->
     <div class="container-fluid navBar">
         <div class="row navBar">
-            <div class="col-lg-9 nav_a">
+            <div class="col-lg-9 nav_a ">
                 <ul>
                     <li class="w20"><a href="https://www.msi.com/index.php" class="pose0 w100"></a></li>
                     <li>Products</li>
@@ -66,6 +68,11 @@
     </div>
     <!-- setting triangle-------------------------------- -->
     <div class="setting"><img src="images/settingLogo.png" class="pose2"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 padding"></div>
+        </div>
+    </div>
     <!-- slider----------------------------------------- -->
     <div class=" container-fluid ">
         <div class="row ">
@@ -192,95 +199,154 @@
         </div>
     </div>
     <!-- second img box------------------------------------ -->
+
+    <!-- ----------------------------------------- -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 resetLocal">
-                <div class="mainBox">
-                    <div class="childBox child1">
-                        <!-- child1SingleCol -->
-                        <div class="imgH1"><img src="images/banner_Box21.jpeg"></div>
-                        <div class="imgP1">
-                            <h5>EV Charging Solutions</h5><br><span>Smart Charging for Business and Home</span>
-                        </div>
-                    </div>
-                    <div class="childBox">
-                        <div>
-                            <div class="imgH"><img src="images/banner_Box22.jpeg"></div>
-                            <div class="imgP">
-                                <h5>FUNTORO Solutions</h5><br><span>Global Leader in Vehicle Infotainment &
-                                    Telematics</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="imgH"><img src="images/banner_box23.jpeg"></div>
-                            <div class="imgP">
-                                <h5>ServerServer, Networking & IIoT</h5><br><span>Global Forerunner Hardware
-                                    Provider.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="childBox">
-                        <div>
-                            <div class="imgH"><img src="images/banner_Box24.jpeg"></div>
-                            <div class="imgP">
-                                <h5>Autonomous Mobile Robot (AMR)</h5><br><span>AI , Automation and Robotics</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="imgH"><img src="images/banner_box25.jpeg"></div>
-                            <div class="imgP">
-                                <h5>Automotive and Commercial</h5><br><span>Your Best ODM Partner of AIoT
-                                    Solution</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="childBox">
-                        <div>
-                            <div class="imgH"><img src="images/banner_box26.jpeg"></div>
-                            <div class="imgP">
-                                <h5>AIoT & Industrial Solutions</h5><br><span>Provide Embedded Boards & Systems with
-                                    Longevity Support</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="imgH"><img src="images/banner_box27.jpeg"></div>
-                            <div class="imgP">
-                                <h5>Rugged Tablet</h5><br><span>Professional Design & Manufacture Service.</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-12 border0">
+                <div class="box1">
+                    <div class="box2"><a href="https://www.msi.com/Landing/evse">
+                            <div class="b2img"><img src="images/banner_Box21.jpeg"></div>
+                            <div class="b2p">
+                                <h5>EV Charging Solutions</h5><br>
+                                <p>Smart Charging for Business and Home</p>
 
-
-                </div>
-            </div>
-            <!-- ----------------------------------------- -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 border0">
-                        <div class="box1">
-                            <div class="box2"><a href="https://www.msi.com/Landing/evse">
-                                    <div class="b2img"><img src="images/banner_Box21.jpeg"></div>
-                                    <div class="b2p">
-                                        <h5>EV Charging Solutions</h5><br>
-                                        <p>Smart Charging for Business and Home</p>
-
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box11">
+                        <div class="box3">
+                            <div class="box4"><a href="https://eps.msi.com/" class="box456a">
+                                    <div class="b456img"><img src="images/banner_Box23.jpeg" class="w-100">
+                                    </div>
+                                    <div class="b456p">
+                                        <h5>ServerServer, Networking & IIoT</h5><br>
+                                        <p>Global Forerunner Hardware Provider.</p>
+                                    </div>
+                                </a></div>
+                            <div class="box5">
+                                <a href="https://amr.msi.com/" class="box456a">
+                                    <div class="b456img"><img src="images/banner_box27.jpeg" class="w-100">
+                                    </div>
+                                    <div class="b456p">
+                                        <h5>Rugged Tablet</h5><br>
+                                        <p>Professional Design & Manufacture Service.</p>
                                     </div>
                                 </a>
                             </div>
-                            <div class="box3">
-                                <div class="box4"><a href="https://ruggedtablet.msi.com/">
-                                    
+                            <div class="box6"><a href="https://ipc.msi.com/" class="box456a">
+                                    <div class="b456img"><img src="images/banner_box22.jpeg" class="w-100">
+                                    </div>
+                                    <div class="b456p">
+                                        <h5>FUNTORO Solutions</h5><br>
+                                        <p>Global Leader in Vehicle Infotainment & Telematics</p>
+                                    </div>
                                 </a></div>
-                                <div class="box5"></div>
-                                <div class="box6"></div>
+                        </div>
+                        <div class="box7">
+                            <div class="box8">
+                                <a href="https://ipc.msi.com/" class="box456a">
+                                    <div class="b456img"><img src="images/banner_box22.jpeg" class="w-100">
+                                    </div>
+                                    <div class="b456p">
+                                        <h5>FUNTORO Solutions</h5><br>
+                                        <p>Global Leader in Vehicle Infotainment & Telematics</p>
+                                    </div>
+                                </a>
                             </div>
+                            <div class="box9"></div>
+                            <div class="box10"></div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <!-- pictureBox================================================================ -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bigboxContainer">
+                <div class="bigbox">
+                    <a href="https://www.msi.com/Landing/evse">
+                        <div class="b2img"><img src="images/banner_Box21.jpeg"></div>
+                        <div class="b2p">
+                            <h5>EV Charging Solutions</h5><br>
+                            <p>Smart Charging for Business and Home</p>
 
-            <script src="js/index.js"></script>
+                        </div>
+                    </a>
+                </div>
+                <div class="bigbox1">
+                    <div class="minibox">
+                        <div class="image"><a href="#"><img src="images/banner_box23.jpeg"></a></div>
+                        <div class="textp b456p">
+                            <h5>ServerServer, Networking & IIoT</h5><br>
+                            <p>Global Forerunner Hardware Provider.</p>
+                        </div>
+                    </div>
+                    <div class="minibox">
+                        <div class="image"><a href="#"><img src="images/banner_box27.jpeg"></a></div>
+                        <div class="textp b456p">
+                            <h5>Rugged Tablet</h5><br>
+                            <p>Professional Design & Manufacture Service.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bigbox1">
+                    <div class="minibox">
+                        <div class="image"><a href="#"><img src="images/banner_Box22.jpeg"></a></div>
+                        <div class="textp b456p">
+                            <h5>FUNTORO Solutions</h5><br>
+                            <p>Global Leader in Vehicle Infotainment & Telematics</p>
+                        </div>
+                    </div>
+                    <div class="minibox">
+                        <div class="image"><a href="#"><img src="images/banner_box24.jpeg"></a></div>
+                        <div class="textp b456p">
+                            <h5>Autonomous Mobile Robot (AMR)</h5><br>
+                            <p>AI , Automation and Robotics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bigbox1">
+                    <div class="minibox">
+                        <div class="image"><a href="#"><img src="images/banner_box25.jpeg"></a></div>
+                        <div class="textp b456p">
+                            <h5>Automotive and Commercial</h5><br>
+                            <p>Your Best ODM Partner of AIoT Solution</p>
+                        </div>
+                    </div>
+                    <div class="minibox">
+                        <div class="image"><a href="#"><img src="images/banner_box26.jpeg"></a></div>
+                        <div class="textp b456p">
+                            <h5>AIoT & Industrial Solutions</h5><br>
+                            <p>Provide Embedded Boards & Systems with Longevity Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------- -->
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="ibox"></div>
+            </div>
+            <div class="col-3">
+                <div class="ibox"></div>
+            </div>
+            <div class="col-3">
+                <div class="ibox"></div>
+            </div>
+            <div class="col-3">
+                <div class="ibox"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
