@@ -528,9 +528,7 @@ body {
     text-decoration: underline;
 }
 
-.iconBoxBh {
-    background-color: #ececec;
-}
+
 
 /* Discover--------------------------------------- */
 .shade {
@@ -540,14 +538,21 @@ body {
 .h2w {
     width: 100%;
     text-align: center;
-    height: 20vh;
-    line-height: 15vh;
+    height: 5vh;
+    line-height: 5vh;
     font-family: sans-serif;
     border-radius: 5px;
     box-shadow: inset 0 0 10px white;
     font-weight: 600;
-    font-size: 36px;
+    font-size: calc(24px + 1vw);
 
+}
+
+.centeralize {
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* .adj3 {
@@ -723,230 +728,6 @@ body {
     border: 0;
 }
 
-.box1 {
-    width: 100%;
-    height: 612px;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: row;
-
-}
-
-.box2 {
-    width: 25%;
-    height: 100%;
-    border: 1px solid purple;
-    display: flex;
-    flex-direction: column;
-    /* position: relative; */
-}
-
-.box2 a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-    /* color: black; */
-    position: relative;
-    overflow: hidden;
-    color: #3d3d3d;
-}
-
-.box2 a:hover>.b2img {
-    transform: scale(1.1);
-}
-
-.box2 a:hover>.b2p {
-    background-image: linear-gradient(180deg, gray 1%, white, gray 99%);
-    box-shadow: inset 0 0 5px pink;
-}
-
-
-.box3,
-.box7 {
-    width: 100%;
-    height: 50%;
-    border: 1px solid yellow;
-    display: flex;
-
-    justify-content: space-evenly;
-}
-
-.box3 {
-    align-items: start;
-}
-
-.box7 {
-    align-items: end;
-}
-
-.box4,
-.box5,
-.box6,
-.box8,
-.box9,
-.box10 {
-    width: 32%;
-    height: 98%;
-    border: 1px solid green;
-}
-
-.box456a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-    /* color: black; */
-    position: relative;
-    overflow: hidden;
-    color: #3d3d3d;
-}
-
-.b456img {
-    width: 100%;
-    height: 222px;
-    overflow: hidden;
-    transition: all 300ms ease 0s;
-}
-
-.b456p {
-    width: 100%;
-    height: 80px;
-    background-image: linear-gradient(180deg, gray 10%, white, gray 90%);
-    z-index: 1;
-    line-height: 8px;
-    font-size: 14;
-    padding-left: 10px;
-    padding-top: 15px;
-    overflow: hidden;
-}
-
-.b456p h5 {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.box4 a:hover>.b456img,
-.box5 a:hover>.b456img,
-.box6 a:hover>.b456img {
-    transform: scale(1.1);
-}
-
-.box4 a:hover>.b456p,
-.box5 a:hover>.b456p,
-.box6 a:hover>.b456p {
-    background-image: linear-gradient(180deg, gray 1%, white, gray 99%);
-    box-shadow: inset 0 0 5px pink;
-}
-
-/* ---------------------------------------------------box8,9,10 */
-.box11 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ======================================================== */
-.bigboxContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 612px;
-
-}
-
-
-
-.bigbox {
-    width: 24%;
-    height: 100%;
-    /* border: 1px solid red; */
-}
-
-.bigbox1 {
-    width: 24%;
-    height: 100%;
-    /* border: 1px solid pink; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.minibox {
-    width: 100%;
-    height: 49%;
-    align-items: flex-start;
-    justify-content: space-around;
-    /* border: 1px solid blue; */
-}
-
-/* ------------------------------------------------------- */
-.b2img {
-    width: 100%;
-    height: 532px;
-    /* background-color: rgba(255, 0, 0, 0.416); */
-    overflow: hidden;
-    transition: all 300ms ease 0s;
-}
-
-.b2img img {
-    width: 100%;
-    transform: scale(1.01);
-}
-
-.b2p {
-    width: 100%;
-    height: 80px;
-    background-image: linear-gradient(180deg, gray 10%, white, gray 90%);
-    z-index: 1;
-    line-height: 8px;
-    font-size: 14;
-    padding-left: 10px;
-    padding-top: 15px;
-}
-
-.b2p h5 {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.bigbox a:hover>.b2img {
-    transform: scale(1.05);
-}
-
-.bigbox a:hover>.b2p {
-    background-image: linear-gradient(180deg, rgb(171, 171, 171) 1%, white, rgb(171, 171, 171) 99%);
-    box-shadow: inset 0 0 5px rgb(248, 255, 192);
-}
-
-.bigbox a,
-.bigbox1 a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-    /* color: black; */
-    position: relative;
-    overflow: hidden;
-    color: #3d3d3d;
-}
-
 .image {
     overflow: hidden;
     transition: all 250ms ease 0s;
@@ -999,7 +780,7 @@ body {
 }
 
 /* 222222222222222222222222222222      picBoxLast    222222222222222222222222222  */
-/* .linkLastPicBox {
+.linkLastPicBox {
     width: 100%;
     height: 30vh;
     display: flex;
@@ -1013,9 +794,12 @@ body {
     overflow: hidden;
     transition: all 300ms ease 0s;
     box-sizing: border-box;
-} */
+}
 
-.picBoxLast1,
+.scaleUp:hover>.imgcontainer img {
+    transform: scale(1.05);
+}
+
 .picBoxlast2 {
     height: 70%;
     width: 100%;
@@ -1026,13 +810,13 @@ body {
     transform: scale(1.01);
 }
 
-.pBoxLast1,
 .pBoxLast2 {
+    position: absolute;
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    width: 96.5%;
+    width: 100%;
     height: 35%;
     bottom: 0;
     text-align: start;
@@ -1043,9 +827,9 @@ body {
     overflow: hidden;
 }
 
-.scaleup:hover {
+/* .scaleup:hover {
     transform: scale(1.05);
-}
+} */
 
 .scaleup {
     overflow: hidden;
@@ -1053,17 +837,24 @@ body {
 }
 
 .scaleUp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.pBoxLast1 h5,
-.pBoxLast1 p {
+.pBoxLast2 h5,
+.pBoxLast2 p {
+    font-size: calc(10px + 0.5vw);
     text-align: start;
     line-height: 10px;
 }
 
 .imgcontainer {
     overflow: hidden;
+    position: relative;
 }
 
 .imgcontainer:hover>.pBoxLast2 {
@@ -1219,4 +1010,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media all and (min-width:992) {
+    .iconBoxBg {
+        background-color: #ececec;
+    }
+}
+
+@media all and (max-width:992px) {
+    .iconBoxBg {
+        display: none;
+    }
+
+    .img2 {
+        width: 15%;
+    }
 }
