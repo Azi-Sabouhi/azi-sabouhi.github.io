@@ -1,9 +1,28 @@
-body {
-    background-image: linear-gradient(to bottom, rgb(112, 112, 112), rgb(255, 255, 255) 30%, rgb(112, 112, 112));
-    /* background-repeat: no-repeat; */
-    font-family: sans-serif;
-    /* overflow-x: hidden; */
+@font-face {
+    font-family: 'Lunasima1';
+    src: url('../fonts/Lunasima-Regular.woff2') format('woff2'),
+        url('../fonts/Lunasima-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Lunasima';
+    src: url('../fonts/Lunasima-Bold.woff2') format('woff2'),
+        url('../fonts/Lunasima-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body {
+    /* background-image: linear-gradient(to bottom, rgb(112, 112, 112), rgb(255, 255, 255) 30%, rgb(112, 112, 112)); */
+    font-family: "Lunasima1", "Lunasima", sans-serif;
+    background-color: #ffffff;
+    font-size: calc(14px + 0.2vw);
 }
 
 /* change to local---------------------------------- */
@@ -25,6 +44,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: start;
+    position: relative;
     width: 100%;
     height: 12vh;
     box-shadow: inset 0 0 30px white;
@@ -32,22 +52,33 @@ body {
     position: fixed;
     z-index: 5;
     top: 0;
+    cursor: pointer;
 }
 
 .local:hover p {
     font-weight: 500;
     text-shadow: 0 0 10px blueviolet;
+    /* font-size: calc(12px + 0.05vw); */
 }
 
 .local button {
-    margin-left: 30vw;
+    /* margin-left: 20vw; */
+    right: 10vw;
     border-radius: 10px;
     height: 7vh;
     width: 20vw;
     background-color: #808080;
     color: white;
     transition: all 300ms ease 0s;
+    font-size: calc(10px + 0.5vw);
 
+    right: 20px;
+
+}
+
+.button1 {
+    position: absolute;
+    right: 100px;
 }
 
 .local button a {
@@ -67,7 +98,7 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    line-height: px;
+    line-height: 7vh;
 }
 
 /* 
@@ -99,12 +130,14 @@ body {
 }
 
 .local p {
+    width: 60%;
     margin-top: 8px;
     height: 5vh;
     line-height: 5vh;
     padding-left: 5vw;
     color: #ffffff;
     text-shadow: 0 0 1px solid blue;
+    font-size: calc(14px + 0.1vw);
     /* position: absolute; */
     transition: all 200ms ease 0s;
 }
@@ -125,7 +158,7 @@ body {
 
 }
 
-ul {
+.navbar ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -133,7 +166,7 @@ ul {
     width: 100%;
 }
 
-li {
+.navbar ul li {
     /* line-height: 82.5px; */
     display: flex;
     align-items: center;
@@ -235,6 +268,56 @@ li {
 
 }
 
+/* .................................................Slider */
+.slider-container {
+    width: 100%;
+    height: 490px;
+    white-space: nowrap;
+    background-color: #3d3d3d;
+    overflow: hidden;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    margin-right: -4px;
+    transition: all 500ms ease 0s;
+    border: 1px solid green;
+}
+
+.left,
+.right {
+    position: absolute;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    transition: all 300ms ease 0s;
+    border: 1px solid blue;
+}
+
+.left:hover,
+.right:hover {
+    text-shadow: 1px 1px 3px rgb(170, 170, 170), -1px -1px 3px rgb(170, 170, 170);
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+
+
+/* .................................................SettingBox */
 .setting {
     width: 80px;
     height: 80px;
@@ -247,7 +330,8 @@ li {
     flex-direction: column-reverse;
     align-items: start;
     cursor: pointer;
-    z-index: 5;
+    /* SH */
+    z-index: 1000;
 }
 
 .pose2 {
@@ -259,9 +343,140 @@ li {
 .size2 {
     width: 100%;
     position: relative;
+}
+
+.settingBox {
+    width: 38%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    /* SH */
+    z-index: 999;
+    left: 0;
+    padding: 20px 50px 20px 30px;
+
+    -moz-transform-origin: left;
+    -webkit-transform-origin: left;
+    -moz-transform-origin: left;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+
+    transition: all 500ms linear 0s;
+
+    -moz-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: auto;
+    /* width: fit-content; */
+    overflow-y: scroll;
+    font-size: 16px;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+
+}
+
+.settingBox button {
+    width: 13vw;
+    font-size: calc(10px + 0.6vw);
+    background-color: #6a6a6a;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    height: 7vh;
+    /* margin: 15px; */
+    line-height: 7vh;
 
 
 }
+
+.notice {
+    font-size: 17;
+    color: red;
+}
+
+.switchOn {
+    width: 90px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #3d3d3d;
+    color: aliceblue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 85%;
+    line-height: 30px;
+    cursor: pointer;
+    top: -30px;
+}
+
+.switchOn:hover {
+    outline: 2px solid blue;
+    border-radius: 30px;
+    /* outline-offset: 1px; */
+
+}
+
+.switchOn p {
+    width: 100%;
+    /* padding-right: 10px; */
+    text-align: center;
+
+}
+
+.s-on {
+    color: white;
+    /* margin-left: 100px; */
+}
+
+.s-off {
+    color: #b8b8b8;
+    /* margin-left: 20px; */
+}
+
+.switch-button {
+    width: 42px;
+    height: 22px;
+    border-radius: 25px;
+    position: absolute;
+    /* margin-top: px; */
+    background-color: #666666;
+    z-index: 1;
+    right: 5px;
+    transition: all 200ms ease-out 0s;
+}
+
+.switch-button-position {
+    right: 42px;
+}
+
+.switchBlueOutlien {
+    outline: 2px solid blue;
+    border-radius: 30px;
+    outline-offset: 3px;
+}
+
+.CloseInSettingBox {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 98%;
+    top: -18%;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    filter: drop-shadow(1px 1px 1px black);
+    transition: all 200ms ease-in 0s;
+    cursor: pointer;
+    /* border: 1px solid blue; */
+}
+
+.CloseInSettingBox:hover {
+    filter: drop-shadow(1px 1px 2px red) drop-shadow(-1px -1px 2px red);
+}
+
 
 /* section after slider--------------------------------------- */
 .adjust1 {
@@ -283,10 +498,11 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-shrink: 1;
     height: 81px;
     line-height: 81px;
-    font-size: 14;
-    font-family: sans-serif;
+    font-size: calc(10px + 0.4vw);
+
 
 }
 
@@ -310,6 +526,10 @@ li {
 
 .adj2 span:hover {
     text-decoration: underline;
+}
+
+.iconBoxBh {
+    background-color: #ececec;
 }
 
 /* Discover--------------------------------------- */
@@ -352,6 +572,7 @@ li {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .mBoxc1 img {
@@ -605,6 +826,7 @@ li {
     font-size: 14;
     padding-left: 10px;
     padding-top: 15px;
+    overflow: hidden;
 }
 
 .b456p h5 {
@@ -649,13 +871,13 @@ li {
 .bigbox {
     width: 24%;
     height: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .bigbox1 {
     width: 24%;
     height: 100%;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -667,7 +889,7 @@ li {
     height: 49%;
     align-items: flex-start;
     justify-content: space-around;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 /* ------------------------------------------------------- */
@@ -725,24 +947,263 @@ li {
     color: #3d3d3d;
 }
 
+.image {
+    overflow: hidden;
+    transition: all 250ms ease 0s;
+}
+
 .image a {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    overflow: hidden;
+    transition: all 250ms ease 0s;
 }
 
 .image a img {
     width: 100%;
     transform: scale(1.01);
+    transition: all 250ms ease 0s;
 }
+
+.image a:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 0 10px gold;
+}
+
+/* 000000000000000000000000000 img pack box 00000000000000000000000000000*/
+.ibox {
+    flex-direction: column;
+    padding: 0;
+}
+
+.ibox:hover {
+    box-shadow: inset 0 0 25px rgb(245, 245, 245);
+    /* filter: drop-shadow(0 0 15px rgb(232, 141, 252) drop-shadow(0 0 5px rgb(210, 64, 210))); */
+}
+
+.imgadj {
+    width: 40px;
+}
+
+.ibox img:hover {
+    filter: drop-shadow(0 0 15px rgb(50, 251, 158)) drop-shadow(0 0 10px rgb(253, 253, 173)) drop-shadow(0 0 5px rgb(18, 211, 249));
+}
+
+.heightadj {
+    height: 20vh;
+    /* background-image: linear-gradient(to left, black, silver, white, silver, gray, black); */
+    background-color: #ffffff;
+}
+
+/* 222222222222222222222222222222      picBoxLast    222222222222222222222222222  */
+/* .linkLastPicBox {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 255, 255, 0.488);
+    text-decoration: none;
+    color: #222222;
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms ease 0s;
+    box-sizing: border-box;
+} */
+
+.picBoxLast1,
+.picBoxlast2 {
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.picBoxLast1 img {
+    transform: scale(1.01);
+}
+
+.pBoxLast1,
+.pBoxLast2 {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 96.5%;
+    height: 35%;
+    bottom: 0;
+    text-align: start;
+    color: rgb(30, 30, 30);
+    background-color: rgba(213, 213, 213, 0.695);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.scaleup:hover {
+    transform: scale(1.05);
+}
+
+.scaleup {
+    overflow: hidden;
+    transition: all 300ms ease 0s;
+}
+
+.scaleUp {
+    overflow: hidden;
+}
+
+.pBoxLast1 h5,
+.pBoxLast1 p {
+    text-align: start;
+    line-height: 10px;
+}
+
+.imgcontainer {
+    overflow: hidden;
+}
+
+.imgcontainer:hover>.pBoxLast2 {
+    background-color: #22222282;
+    color: white;
+}
+
+/* 7777777777777777777777777777777777777777777777777777777777777777777777777777multipicbox */
+.paddingL8R4 {
+    padding-right: 4px;
+    padding-left: 8px;
+
+}
+
+.paddingR8L4 {
+    padding-right: 8px;
+    padding-left: 4px;
+}
+
+.paddingLR4 {
+    padding-left: 4px;
+    padding-right: 4px;
+
+}
+
+.linkProprties {
+    text-decoration: none;
+    color: black;
+    transition: all 300ms ease 0s;
+}
+
+.imgBox {
+    overflow: hidden;
+    transition: all 300ms ease 0s;
+
+}
+
+.linkProprties:hover>.imgBox {
+    transform: scale(1.1);
+}
+
+.linkProprties:hover>.h5pContainer {
+    background-color: #dadada;
+}
+
+.h5Font {
+    font-size: calc(14px + 0.1vw);
+    font-weight: bold;
+    line-height: 15px;
+    padding-left: 5px;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.pFont {
+    font-size: calc(12px + 0.2vw);
+    line-height: 15px;
+    padding-left: 5px;
+    margin-top: 25px;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.h5pContainer {
+    display: flex;
+    padding-top: 5px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    height: 12vh;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+
+.picBoxHeight1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overflow2pics {
+    overflow: hidden;
+}
+
+/* 777777777777777777777777777777      footer       77777777777777777777777777777 */
+
+.footerBox ul li {
+    margin: 0;
+    padding-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: gray;
+    text-align: left;
+    line-height: 35px;
+}
+
+.footerBox ul {
+    list-style-type: none;
+    padding-left: 20px;
+
+}
+
+.head {
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #696969;
+    /* font-family: "lunasima"; */
+}
+
+.footerBox li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #696969;
+    text-align: start;
+}
+
+
 
 /* -------------------------------------------------------- */
 /*999999999999999999999999999999999999999999 js classes 999999999999999999999999999999999999*/
 .localToZiro {
     transform: scaleY(0);
 
+}
+
+.settingToZiro {
+    -moz-transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .toZiro {
