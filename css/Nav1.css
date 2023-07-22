@@ -168,7 +168,8 @@
         outline: 0;
         width: 100%;
         height: 82.5px;
-        background-image: linear-gradient(360deg, silver 10%, white, silver 90%);
+        /* background-image: linear-gradient(360deg, silver 10%, white, silver 90%); */
+        background-color: aliceblue;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -177,7 +178,8 @@
     .ul1 {
         width: 100%;
         height: 82.5px;
-        background-image: linear-gradient(360deg, silver 10%, white, silver 90%);
+        /* background-image: linear-gradient(360deg, silver 10%, white, silver 90%); */
+        background-color: aliceblue;
         display: flex;
         justify-content: left;
         list-style-type: none;
